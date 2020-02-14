@@ -11,11 +11,14 @@ import {MatCardModule} from '@angular/material/card';
 import {FormsModule} from '@angular/forms';
 import { ApiService } from './api.service';
 import {HttpClientModule} from '@angular/common/http';
+import { QuestionComponent } from './question/question.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuizQuestionComponent
+    QuizQuestionComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatInputModule,
     MatCardModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
