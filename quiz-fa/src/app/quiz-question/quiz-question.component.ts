@@ -14,6 +14,7 @@ export class QuizQuestionComponent implements OnInit {
     this.api.postQuestion(question);
   }
   ngOnInit(): void {
+    this.api.questionSelected.subscribe(question => this.question = question);
   }
 
 }

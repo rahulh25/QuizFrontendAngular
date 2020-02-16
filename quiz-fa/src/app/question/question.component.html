@@ -1,9 +1,12 @@
 <mat-card>
+  <mat-card-title>Questions List</mat-card-title>
   <mat-card-content>
     <mat-list>
-        <mat-list-item *ngFor="let item of questions">
-            <p mat-line>{{item.text}}</p>
-        </mat-list-item>
+      <mat-list-item *ngFor="let item of questions">
+        <p mat-line (click)="api.selectQuestion(item)" class="clickLink">
+          {{ item.text }}
+        </p>
+      </mat-list-item>
     </mat-list>
   </mat-card-content>
 </mat-card>
